@@ -1,5 +1,5 @@
 export var LT_Config = {
-    Local_API_Url: "https://localhost:7018/api"
+    Local_API_Url: "https://localhost:7018/api/"
 }
 
 export var CONFIG = {
@@ -15,5 +15,8 @@ export var API_URLS: any = {
     Generic_api_url: main_url.api_url,
 
     //leaves
-    emp_leaves:"leaves",
+    emp_leaves_url:"leaves",
+
+    // employee by id
+    emp_leaves_by_id_url:"leaves"
 }

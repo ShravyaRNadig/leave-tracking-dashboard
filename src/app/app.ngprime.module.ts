@@ -17,9 +17,11 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { CalendarModule } from 'primeng/calendar';
 import { SidebarModule } from 'primeng/sidebar';
 import { MultiSelectModule } from 'primeng/multiselect';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
 
 @NgModule({
     exports: [
+        ConfirmDialogModule,
         DropdownModule,
         InputTextModule,
         TabViewModule,

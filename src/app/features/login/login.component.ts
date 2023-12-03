@@ -22,7 +22,7 @@ export class LoginComponent {
    
     if (this.loginForm.valid) {
       // Add your login logic here
-      this.router.navigateByUrl('/employee/emp-dashboard');
+      this.router.navigateByUrl('/manager/view-leave-request');
       console.log('Form submitted!', this.loginForm.value);
       // You can add authentication logic here
     } else {

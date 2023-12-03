@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ManagerService } from 'src/app/core/service/manager.service';
 
 @Component({
   selector: 'app-view-leave-request',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./view-leave-request.component.css']
 })
 export class ViewLeaveRequestComponent {
-
+  leaveHistory!: any[];
+  constructor(private leaveService: ManagerService){}
+  ngOnInit(){
+    this.emp_leave()
+  }
+ 
+  emp_leave(){
+    console.log('hi')
+    this.leaveService.getAllEmployee().subscribe((data: any[]) => {
+      this.leaveHistory = data;
+    });
+  }
 }

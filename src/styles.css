@@ -1,27 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 @import "primeng/resources/themes/lara-light-blue/theme.css";
 @import "primeng/resources/primeng.css";
-
 :root {
-  --color-primary-bg: #1356b4;
-  --color-primary-text: #1b1b1b;
-  --color-primary-button: #1356b4;
-  --color-primary-input-border: #0b345f;
-  --color-secondry-text: #757575;
-  --color-secondry-text2: #71767a;
-  --color-links: #005ea2;
-  --color-white: #ffffff;
-  --color-black: #000000;
-  --color-white-light: rgba(255, 255, 255, 0.75);
-  --color-sucess: #00a91c;
-  --color-pending: #a9aeb1;
-  --color-red: #ff1400;
-  --color-light-blue: #1394cf;
-  --color-hover: #e2eeff;
-  --color-disabled: #c3c7ca;
-  --color-disabled-text: rgba(117, 117, 117, 0.5);
-  --color-available-slot: rgba(117, 117, 117, 0.5);
-  --color-bg-dropdown: #e2eeff;
+	--color-white: #ffffff;
+	--color-light: #f1f5f9;
+	--color-black: #121212;
+	--color-night: #001632;
+
+	--color-red: #f44336;
+	--color-blue: #1a73e8;
+	--color-gray: #80868b;
+	--color-grayish: #dadce0;
+
+	--shadow-normal: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+		0 1px 2px 0 rgba(0, 0, 0, 0.06);
+	--shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+		0 2px 4px -1px rgba(0, 0, 0, 0.06);
+	--shadow-large: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+		0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 body {
@@ -41,122 +37,11 @@ body {
   margin-top: 0rem;
 }
 
-.sidebar {
-  background-color: #FAFAFA;
-  color: #6c757d;
-}
-
-.required-field{
-  color: var(--color-red);
-}
-
-.link-text {
-  line-height: 19px;
-  color: var(--color-primary-button);
-  cursor: pointer;
-}
-
-.primary-button {
-  background: var(--color-primary-button);
-  border-radius: 4px;
-  border: none;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 21px;
-  color: var(--color-white);
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-}
-
-.primary-button1 {
-  border-radius: 4px;
-  border: none;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 21px;
-  color: var(--color-white);
-  cursor: pointer;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  position: relative;
-  overflow: hidden;
-}
 
 .login {
   display: flex;
   align-items: center;
   padding: 30px;
-}
-
-.auth-right {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: left;
-}
-
-.field {
-  margin-bottom: 32px;
-}
-
-.forgot-password {
-  float: right;
-  margin-top: 16px;
-}
-
-.para-width {
-  width: 380px;
-}
-
-
-.active {
-  padding: 3px 19px;
-  background: #dee2e6;
-  font-weight: 700;
-  border-radius: 0px;
-  /* transition: box-shadow 0.2s; */
-  color: #0a4578;
-  font-size: 16px;
-  font-style: normal;
-  line-height: normal;
-   display: flex;
-  /* justify-content: center; */
-  align-items: center; 
-}
-
-
-.sidebarItem {
-  text-decoration: none;
-  color: black;
-}
-
-.item {
-  padding: 5px 20px;
-  padding: 5px;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: normal;
-  
-}
-
-i {
-  padding: 10px 0px;
-}
-
-.red-error {
-  color: #ae0606;
-  display: flex;
-  justify-content: center; 
 }
 
 

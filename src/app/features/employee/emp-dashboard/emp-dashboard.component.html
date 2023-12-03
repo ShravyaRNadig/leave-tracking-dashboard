@@ -1,24 +1,19 @@
 <div class="grid">
     <div class="col-12 md:col-12 lg:col-12 xl:col-12">
         <div class="grid flex justify-content-between align-items-center">
-            <div class="col-12 md:col-12 lg:col-3 xl:col-3" style="margin-left: 20px;">
-                <h2>Hi {{ employeeName }},</h2>
+            <div class="col-12 md:col-12 lg:col-3 xl:col-3" style="margin-left: 20px;" *ngIf="leaveHistory">
+                <!-- <h2>Hi {{ leaveHistory?.employeeName }},</h2> -->
             </div>
         </div>
         <div class="grid" style="border-top: 1px solid rgba(175, 177, 178, 0.50); border-bottom: 1px solid rgba(175, 177, 178, 0.50); padding: 20px; margin: 5px; width:79rem; justify-content: center;">
 
             <div class="col-12 md:col-12 lg:col-3 xl:col-3 grid align-items-center flex justify-content-center">
-                 <b style="padding:0px 5px;"> Employee ID </b>
-                 <p style="padding: 0px 5px;margin: 0px;">{{ employeeID }}</p>
-            </div>
-
-            <div class="col-12 md:col-12 lg:col-3 xl:col-3 grid align-items-center flex justify-content-center">
                 <b style="padding:0px 5px;">Total Leaves</b>
-                <p style="padding: 0px 5px;margin: 0px;">{{ totalLeaves }}</p>
+                <!-- <p style="padding: 0px 5px;margin: 0px;">{{ totalLeaves }}</p> -->
             </div>
             <div class="col-12 md:col-12 lg:col-3 xl:col-3 grid align-items-center flex justify-content-center">
                 <b style="padding:0px 5px;">Leaves Left </b>
-                <p style="padding: 0px 5px;margin: 0px;">{{ leavesLeft }}</p>
+                <!-- <p style="padding: 0px 5px;margin: 0px;">{{ leavesLeft }}</p> -->
             </div>        
         
         </div>
@@ -31,10 +26,12 @@
     
                 <ng-template pTemplate="header">
                     <tr>
-                        <th pSortableColumn="date" style="width:20%">Date <p-sortIcon field="date"></p-sortIcon>
+                        <th pSortableColumn="employeeName" style="width:20%">Employee Name <p-sortIcon field="employeeName"></p-sortIcon>
                         </th>
-                        <th pSortableColumn="reason" style="width:20%">Reason <p-sortIcon field="reason"></p-sortIcon>
+                        <th pSelectableColumn="fromDate" style="width: 20%;"> From Date <p-sortIcon field="fromDate"></p-sortIcon></th>
+                        <th pSortableColumn="toDate" style="width:20%">To Date <p-sortIcon field="toDate"></p-sortIcon>
                         </th>
+                        <th pSortableColumn="typeOfLeave" style="width: 20%;">Type Of Leave <p-sortIcon field="typeOfLeave"></p-sortIcon></th>
                         <th pSortableColumn="status" style="width:20%">Status <p-sortIcon field="status"></p-sortIcon>
                         </th>
     
@@ -42,13 +39,16 @@
                 </ng-template>
                 <ng-template pTemplate="body" let-leave>
                     <tr>
-                        <td>{{ leave.date }}</td>
-                        <td>{{ leave.reason }}</td>
+                        <td>{{ leave.employeeName }}</td>
+                        <td>{{ leave.fromDate | date:'MM/DD/YYYY'}}</td>
+                        <td>{{ leave.toDate }}</td>
                         <td>{{ leave.status }}</td>
                     </tr>
                 </ng-template>
             </p-table>
         </div>
-       
+        <!-- <p-confirmDialog [style]="{width: '50vw'}"></p-confirmDialog> -->
+        <!-- <p-button icon="pi pi-check" label="Confirm" (onClick)="openChat()"></p-button>  -->
     </div>
+    
 </div>

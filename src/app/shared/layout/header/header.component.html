@@ -1,1 +1,12 @@
-<p>header works!</p>
+<p-menubar>
+    <ng-template pTemplate="start">
+        <div class="card flex justify-content-center">
+            <h2  style="color: rgb(255, 255, 255); padding: 5px; cursor: pointer;">Dashboard</h2>
+        </div>
+    </ng-template>
+    <ng-template pTemplate="end">
+        <div class="card flex justify-content-center">
+            <h2 (click)="logout()" style="color: rgb(255, 255, 255); padding: 5px; cursor: pointer;">Logout</h2>
+        </div>
+    </ng-template>
+</p-menubar>

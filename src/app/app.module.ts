@@ -4,6 +4,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './shared/layout/layout.component';
 import { HeaderComponent } from './shared/layout/header/header.component';
+import { HttpClientModule } from '@angular/common/http';
+import { NgPrimeModule } from './app.ngprime.module';
 
 @NgModule({
   declarations: [
@@ -13,6 +15,8 @@ import { HeaderComponent } from './shared/layout/header/header.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    NgPrimeModule,
     AppRoutingModule
   ],
   providers: [],

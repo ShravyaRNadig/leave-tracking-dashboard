@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./emp-task.component.css']
 })
 export class EmpTaskComponent {
-
+  closeChat() {
+    // Implement a method to close the popup in your application logic
+  }
 }

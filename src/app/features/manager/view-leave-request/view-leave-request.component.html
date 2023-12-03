@@ -1,1 +1,55 @@
-<p>view-leave-request works!</p>
+<div class="grid">
+    <div class="col-12 md:col-12 lg:col-12 xl:col-12">
+        <div class="grid flex justify-content-between align-items-center">
+            <div class="col-12 md:col-12 lg:col-3 xl:col-3" style="margin-left: 20px;">
+                <!-- <h2>Hi {{ leave.employeeName }},</h2> -->
+            </div>
+        </div>
+        <div class="grid" style="border-top: 1px solid rgba(175, 177, 178, 0.50); border-bottom: 1px solid rgba(175, 177, 178, 0.50); padding: 20px; margin: 5px; width:79rem; justify-content: center;">
+
+            <div class="col-12 md:col-12 lg:col-3 xl:col-3 grid align-items-center flex justify-content-center">
+                <h3 style="padding:0px 5px;">Total Leaves</h3>
+                <!-- <p style="padding: 0px 5px;margin: 0px;">{{ totalLeaves }}</p> -->
+            </div>
+            <div class="col-12 md:col-12 lg:col-3 xl:col-3 grid align-items-center flex justify-content-center">
+                <h3 style="padding:0px 5px;">Leaves Left </h3>
+                <!-- <p style="padding: 0px 5px;margin: 0px;">{{ leavesLeft }}</p> -->
+            </div>        
+        
+        </div>
+        <div style="margin: 30px;"></div>
+        <div style="margin: 10px;">
+            <h4>Leave History</h4>
+            <p-table [value]="leaveHistory" [tableStyle]="{'min-width': '20rem'}" [paginator]="true" [rows]="7"
+                [showCurrentPageReport]="true"
+                currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries">
+    
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th pSortableColumn="employeeName" style="width:20%">Employee Name <p-sortIcon field="employeeName"></p-sortIcon>
+                        </th>
+                        <th pSelectableColumn="fromDate" style="width: 20%;"> From Date <p-sortIcon field="fromDate"></p-sortIcon></th>
+                        <th pSortableColumn="toDate" style="width:20%">To Date <p-sortIcon field="toDate"></p-sortIcon>
+                        </th>
+                        <th pSortableColumn="typeOfLeave" style="width: 20%;">Type Of Leave <p-sortIcon field="typeOfLeave"></p-sortIcon></th>
+                        <th pSortableColumn="kindOfLeaves" style="width: 20%;">Kind Of Leave <p-sortIcon field="kindOfLeaves"></p-sortIcon></th>
+                        <th pSortableColumn="status" style="width:20%">Status <p-sortIcon field="status"></p-sortIcon>
+                        </th>
+    
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-leave>
+                    <tr>
+                        <td><a [routerLink]="['/employee/emp-dashboard',leave.id]" style="text-decoration: none;color:#495057">{{ leave.employeeName }}</a></td>
+                        <td>{{ leave.fromDate | date:'MM/dd/YYYY'}}</td>
+                        <td>{{ leave.toDate | date: 'MM/dd/YYYY'}}</td>
+                        <td>{{ leave.typeOfLeave }}</td>
+                        <td>{{ leave.kindOfLeaves }}</td>
+                        <td>{{ leave.status }}</td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+       
+    </div>
+</div>
